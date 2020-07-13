@@ -6,7 +6,7 @@ env:
   variables:
     test: "test123"
   exported-variables:
-    - test
+    - "test"
   secrets-manager:
     key: secret-idtest_secret-Q8FgMn:TEST_SECRET::
 
@@ -21,7 +21,7 @@ phases:
       - "npm run build"
 artifacts:
   files:
-    - build/*
+    - "build/*"
   name: build-$AWS_REGION-$(date +%Y-%m-%d) 
 
 
