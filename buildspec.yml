@@ -1,0 +1,27 @@
+version: 0.2
+
+run-as: ubuntu
+
+env:
+  variables:
+    test: "test123"
+  exported-variables:
+    - test
+  secrets-manager:
+    key: secret-idtest_secret-Q8FgMn:TEST_SECRET::
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+    commands:
+      - "npm start"
+  build:
+    commands:
+      - "npm run build"
+artifacts:
+  files:
+    - build/*
+  name: build-$AWS_REGION-$(date +%Y-%m-%d) 
+
+
