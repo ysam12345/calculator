@@ -7,8 +7,8 @@ env:
     test: "test123"
   exported-variables:
     - "test"
-  secrets-manager:
-    key: "secret-idtest_secret-Q8FgMn:TEST_SECRET::"
+#  secrets-manager:
+#   key: "secret-idtest_secret-Q8FgMn:TEST_SECRET::"
 
 phases:
   install:
